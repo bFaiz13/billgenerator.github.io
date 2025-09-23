@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Generater</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="heading">
+        <h1>Dev Guru Dyes</h1>
+        <p>Address</p>
+        <p>Phone Number</p>
+    </div>
+    <h2>Invoice</h2>
+    <div class="formContainer">
+        <form id="invoiceForm">
+            <div style="display: flex; gap: 20px;">
+                <div>
+                    <!-- <label for="customerName">Customer Name:</label> -->
+                    <input type="text" id="customerNameInput" name="customerName" placeholder="Customer name" required>
+                </div>
+                <div>
+                    <!-- <label for="paymentType">Payment Type:</label> -->
+                    <select id="paymentTypeInput" name="paymentType" required>
+                        <option value="">Select Payment</option>
+                        <option value="Cash">Cash</option>
+                        <option value="Bank">Bank</option>
+                        <option value="Cheqe">Cheqe</option>
+                        <option value="Upi">UPI</option>
+                    </select>
+                </div>
+
+            </div>
+            <div style="margin-top:10px; display: flex; gap: 20px;">
+                <div>
+                    <input type="text" id="dySize" name="dySize" placeholder="eg. 3, 4.25 in MM" required>
+                </div>
+                <div>
+                    <select id="dyShape" name="dyShape" required>
+                        <option value="">Select Type</option>
+                        <option value="Oval">Oval</option>
+                        <option value="Ball">Ball</option>
+                        <option value="Square">Square</option>
+                        <option value="Diamond">Diamond</option>
+                    </select>
+                </div>
+                <div>
+                    <input type="radio" id="fullDye" name="dyType" value="Full" required>
+                    <label for="fullDye">Full</label>
+
+                    <input type="radio" id="halfDye" name="dyType" value="Half">
+                    <label for="halfDye">Half</label>
+                </div>
+                <div>
+                    <input type="number" id="dyQuantity" name="dyQuantity" placeholder="Quantity" required>
+                </div>
+                <div>
+                    <input type="number" id="dyPrice" name="dyPrice" placeholder="Per Item Price" required>
+
+                </div>
+
+            </div>
+            <div class="buttons">
+                <button type="submit" id="addItemButton" style="margin-top: 10px;">Add item</button>
+                <button id="downloadInvoice" style="margin-top: 10px; margin-left: 5px;" disabled>Download
+                    Bill</button>
+
+                <span id="message" style="margin-left :5px; color :green; font-weight:bold"></span>
+            </div>
+        </form>
+    </div>
+    <hr style="width: 100%;">
+    <div style="width: 90%;">
+        <div style="width: 100%; display: flex;justify-content: flex-end;">
+        </div>
+        <div id="invoiceBillContainer" style="margin: 10px;">
+            <div class="heading">
+                <h1>Dev Guru Dyes</h1>
+                <p>Address</p>
+                <p>Phone Number</p>
+            </div>
+            <div style="margin: auto;display: flex;justify-content: space-between;">
+                <p>Customer Name : <span id="customerName" style="font-weight: bold;"></span></p>
+                <p>Payment Type : <span id="paymentType" style="font-weight: bold;"></span></p>
+                <p style="text-align: right;">Date : <span id="currentDateTime" style="font-weight: bold;"></span></p>
+            </div>
+            <table style="width: 100%;text-align: center;">
+                <thead>
+                    <th>No</th>
+                    <th>Description</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                </thead>
+                <tbody id="showInvoice">
+
+                </tbody>
+                <tr>
+                    <td colspan="4" style="text-align: right;" class="grandtotal">Grand Total</td>
+                    <td id="grandTotal" class="grandtotal"></td>
+                </tr>
+            </table>
+            <p>Thank you for your business!</p>
+            <!-- <div>
+                <h4>QR Code for payment</h4>
+            </div> -->
+        </div>
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
