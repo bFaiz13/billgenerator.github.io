@@ -11,7 +11,7 @@ Built using pure **HTML, CSS, and JavaScript**, the application is fast, reliabl
 - **Dynamic Item Addition:** Input dye size, shape, type (Full/Half), quantity, and price → instantly adds to invoice table.
 - **Automatic Calculation:** Calculates total per item and running **Grand Total**.
 - **Invoice Preview:** Real-time, clean preview of invoice details.
-- **Download/Print Functionality:** Uses `html2canvas` to render invoice as an image (like PDF) for easy downloading/printing.
+- **Download/Print Functionality:** invoice as an image (like PDF) for easy downloading/printing.
 - **Error Handling:** Input validation ensures required fields are filled before adding items.
 
 ---
@@ -37,8 +37,8 @@ This project is intentionally **lightweight and dependency-free** (except for on
 
 Since this is a **single, self-contained HTML file**, running the project is super simple:
 
-1. **Save the Files**: Place `bill_generator.html` and `style.css` in the same folder.  
-2. **Open in Browser**: Double-click `bill_generator.html` to open in Chrome/Firefox/Edge/etc.  
+1. **Save the Files**: Place `index.html` and `style.css` in the same folder.  
+2. **Open in Browser**: Double-click `index.html` to open in Chrome/Firefox/Edge/etc.  
 3. **Start Generating**: Enter customer + item details to build invoices instantly!  
 
 ---
@@ -64,8 +64,4 @@ Since this is a **single, self-contained HTML file**, running the project is sup
 
 ---
 
-## 👨‍💻 Contributing
 
-If you’d like to enhance this project, feel free to **clone the repository** and suggest improvements via pull requests.
-
----
