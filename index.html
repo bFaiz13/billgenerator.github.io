@@ -15,7 +15,7 @@
         <p>Address</p>
         <p>Phone Number</p>
     </div>
-    <h2 style="margin: 0 10px;">Invoice</h2>
+    <h2 style="margin:10px; text-align: center;">Invoice</h2>
     <div class="formContainer">
         <form id="invoiceForm">
             <div style="display: flex; gap: 20px;">
@@ -73,45 +73,42 @@
             </div>
         </form>
     </div>
-    <hr style="width: 100%;">
-    <div style="width: 90%;">
-        <div style="width: 100%; display: flex;justify-content: flex-end;">
+    <hr style="width: 90%;">
+
+    <div id="invoiceBillContainer">
+        <div class="heading">
+            <h1>Dev Guru Dyes</h1>
+            <p>Address</p>
+            <p>Phone Number</p>
         </div>
-        <div id="invoiceBillContainer" style="margin: 10px;">
-            <div class="heading">
-                <h1>Dev Guru Dyes</h1>
-                <p>Address</p>
-                <p>Phone Number</p>
-            </div>
-            <div style="margin: auto;display: flex;justify-content: space-between;">
-                <p>Customer Name : <span id="customerName" style="font-weight: bold;"></span></p>
-                <p>Payment Type : <span id="paymentType" style="font-weight: bold;"></span></p>
-                <p style="text-align: right;">Date : <span id="currentDateTime" style="font-weight: bold;"></span></p>
-            </div>
-            <table style="width: 100%;text-align: center;">
-                <thead>
+        <div class="customerDetails">
+            <p>Customer Name : <span id="customerName" style="font-weight: bold;"></span></p>
+            <p>Payment Type : <span id="paymentType" style="font-weight: bold;"></span></p>
+            <p style="text-align: right;">Date : <span id="currentDateTime" style="font-weight: bold;"></span></p>
+        </div>
+        <table>
+            <thead>
 
-                    <th>No</th>
-                    <th>Description</th>
-                    <th>Quantity</th>
-                    <th>Price</th>
-                    <th>Total</th>
-                </thead>
-                <tbody id="showInvoice">
+                <th>No</th>
+                <th>Description</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Total</th>
+            </thead>
+            <tbody id="showInvoice">
 
-                </tbody>
-                <tr>
-                    <td colspan="4" style="text-align: right;" class="grandtotal">Grand Total</td>
-                    <td id="grandTotal" class="grandtotal"></td>
-                </tr>
-            </table>
-            <p>Thank you for your business!</p>
-            <!-- <div>
+            </tbody>
+            <tr>
+                <td colspan="4" style="text-align: right;" class="grandtotal">Grand Total</td>
+                <td id="grandTotal" class="grandtotal"></td>
+            </tr>
+        </table>
+        <p>Thank you for your business!</p>
+        <!-- <div>
                 <h4>QR Code for payment</h4>
             </div> -->
-        </div>
-
     </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script src="script.js"></script>
 </body>
