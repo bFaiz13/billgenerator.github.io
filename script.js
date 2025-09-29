@@ -69,7 +69,7 @@ const updateGrandTotal = () => {
 updateGrandTotal();
 
 // Buttons Event
-form.addEventListener("submit", (event) => {
+addItemElement.addEventListener("click", (event) => {
     event.preventDefault();
     const formData = new FormData(form);
     let data = {
@@ -99,6 +99,7 @@ form.addEventListener("submit", (event) => {
 });
 
 downloadInvoiceElement.addEventListener("click", (event) => {
+    event.preventDefault();
     const billElement = document.getElementById("invoiceBillContainer");
 
     html2canvas(billElement).then(canvas => {
@@ -113,6 +114,8 @@ downloadInvoiceElement.addEventListener("click", (event) => {
         link.click(); // Programmatically click the link to start the download
         document.body.removeChild(link); // Clean up the temporary link
     });
+    console.log("invoice dfata", invoiceData);
+
 });
 
 resetInvoiceElement.addEventListener("click", () => {
