@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bill Generater</title>
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
@@ -14,7 +15,7 @@
         <p>Address</p>
         <p>Phone Number</p>
     </div>
-    <h2>Invoice</h2>
+    <h2 style="margin: 0 10px;">Invoice</h2>
     <div class="formContainer">
         <form id="invoiceForm">
             <div style="display: flex; gap: 20px;">
@@ -47,7 +48,7 @@
                         <option value="Diamond">Diamond</option>
                     </select>
                 </div>
-                <div>
+                <div style="display: flex ; align-items: center; gap: 5px;">
                     <input type="radio" id="fullDye" name="dyType" value="Full" required>
                     <label for="fullDye">Full</label>
 
@@ -67,7 +68,7 @@
                 <button type="submit" id="addItemButton" style="margin-top: 10px;">Add item</button>
                 <button id="downloadInvoice" style="margin-top: 10px; margin-left: 5px;" disabled>Download
                     Bill</button>
-
+                <button id="resetInvoice" style="margin-top: 10px; margin-left: 5px;float:right">Reset</button>
                 <span id="message" style="margin-left :5px; color :green; font-weight:bold"></span>
             </div>
         </form>
@@ -89,6 +90,7 @@
             </div>
             <table style="width: 100%;text-align: center;">
                 <thead>
+
                     <th>No</th>
                     <th>Description</th>
                     <th>Quantity</th>

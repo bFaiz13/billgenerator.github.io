@@ -4,6 +4,7 @@ const downloadInvoiceElement = document.getElementById("downloadInvoice")
 const customerNameInputElement = document.getElementById("customerNameInput");
 const paymentTypeInputElement = document.getElementById("paymentTypeInput");
 const messageElement = document.getElementById("message");
+const resetInvoiceElement = document.getElementById("resetInvoice");
 
 
 
@@ -114,7 +115,9 @@ downloadInvoiceElement.addEventListener("click", (event) => {
     });
 });
 
-
+resetInvoiceElement.addEventListener("click", () => {
+    location.reload();
+})
 
 
 
